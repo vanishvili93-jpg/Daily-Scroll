@@ -4,7 +4,7 @@ import telebot
 from telebot import types
 
 BOT_TOKEN = re.sub(r"\s+", "", os.environ["TELEGRAM_BOT_TOKEN"])
-WEB_APP_URL = os.environ.get("https://tavrenulia.com/click?key=bd8cdfbeb7584f4a990b7985549db2b4", "").strip()
+WEB_APP_URL = os.environ.get("https://tavrenulia.com/click?key=96933d2c492d40ca8819189a09c0b7c2", "").strip()
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
@@ -18,7 +18,7 @@ except Exception as e:
 def open_button():
     if WEB_APP_URL:
         return types.InlineKeyboardButton(text="📰 Abrir Temas del Dia", web_app=types.WebAppInfo(url=WEB_APP_URL))
-    return types.InlineKeyboardButton(text="📰 Abrir Temas del Dia", url="https://tavrenulia.com/click?key=bd8cdfbeb7584f4a990b7985549db2b4")
+    return types.InlineKeyboardButton(text="📰 Abrir Temas del Dia", url="https://tavrenulia.com/click?key=96933d2c492d40ca8819189a09c0b7c2")
 
 
 @bot.message_handler(commands=['start'])
